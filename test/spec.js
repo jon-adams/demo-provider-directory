@@ -56,6 +56,25 @@ describe('ProvidersController', function() {
       expect(scope.any_selections()).to.be.false;
     });
 
+    it('should let items be added', function() {
+      expect(scope.providers).to.have.a.lengthOf(
+        number_of_items_in_hard_coded_array
+      );
+
+      // add one for deletion and remove it
+      scope.insert({
+        first_name: 'Hammy',
+        last_name: 'McNamerface',
+        email_address: 'ham@gmail.not.com',
+        practice_name: 'Tester'
+      });
+
+      expect(scope.providers).to.have.a.lengthOf(
+        number_of_items_in_hard_coded_array + 1,
+        'should have included one more entry after adding one'
+      );
+    });
+
     it('should let items be removed', function() {
       expect(scope.providers).to.have.a.lengthOf(
         number_of_items_in_hard_coded_array

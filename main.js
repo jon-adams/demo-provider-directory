@@ -66,6 +66,21 @@ var providersCtrl = providerApp.controller(
     // text filter
     $scope.query = '';
 
+    $scope.insert = function(provider) {
+      $scope.providers.unshift(angular.copy(provider));
+
+      /*
+       * not the most elegant way to reset the form, but the "correct" way to do it is to write a whole new
+       * ngFormController which, for the sake of time and since this data set only has a handful of fields, skipping
+       * for now :\
+       */
+      provider.first_name = '';
+      provider.last_name = '';
+      provider.email_address = '';
+      provider.specialty = '';
+      provider.practice_name = '';
+    };
+
     $scope.remove = function() {
       $scope.providers = $filter('filter')($scope.providers, {
         selected: false
