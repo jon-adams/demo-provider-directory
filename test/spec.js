@@ -29,8 +29,27 @@ describe('ProvidersController', function() {
     });
   });
 
-  describe('SortingAndFiltering', function() {
-    it('default sort should be off, aka no sort', function() {
+  describe('Providers', function() {
+    it('should not be selected to start', function() {
+      expect(scope.providers)
+        .to.be.an('array', 'should have been an array')
+        .that.has.lengthOf(6, 'should have included 6 entries');
+    });
+
+    it('should have no selections yet', function() {
+      angular.forEach(scope.providers, function(provider) {
+        expect(provider).to.have.property('selected');
+        expect(provider.selected).to.be.false;
+      });
+    });
+
+    it('should report no selections too', function() {
+      expect(scope.any_selections()).to.be.false;
+    });
+  });
+
+  describe('Sorting & filtering', function() {
+    it('should be off, aka no sort', function() {
       expect(scope.orderProp).to.be.equal(
         '',
         'sort should start blank, aka no sort'

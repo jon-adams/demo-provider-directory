@@ -94,7 +94,7 @@
               <tbody>
                 <tr id="provider-list" ng-repeat="provider in providers | filter:query | orderBy:orderProp:direction_reverse">
                   <td>
-                    <input type="checkbox" />
+                    <input type="checkbox" name="selections[]" ng-model="provider.selected" />
                   </td>
                   <td>
                     <div>
@@ -111,7 +111,7 @@
             </table>
           </div>
           <div class="pull-right">
-            <button class="btn btn-danger disabled">Remove</button>
+            <button class="btn btn-danger" ng-disabled="!any_selections()">Remove</button>
           </div>
         </div>
       </div>

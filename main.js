@@ -1,7 +1,7 @@
 var providerApp = angular.module('providerApp', []);
 var providersCtrl = providerApp.controller(
   'ProvidersController',
-  function ProviderController($scope) {
+  function ProviderController($scope, $filter) {
     // setup provided data
     $scope.providers = angular.fromJson([
       {
@@ -47,6 +47,15 @@ var providersCtrl = providerApp.controller(
         practice_name: 'Juday Family Practice'
       }
     ]);
+
+    // set all providers to default unselected
+    angular.forEach($scope.providers, function(value) {
+      value.selected = false;
+    });
+    $scope.any_selections = function() {
+      var checked = $filter('filter')($scope.providers, { selected: true });
+      return checked.length > 0;
+    };
 
     // order by (default to blank, aka no sort)
     $scope.orderProp = '';
