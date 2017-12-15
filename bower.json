@@ -1,0 +1,14 @@
+{
+  "name": "demo-directory",
+  "main": "index.html",
+  "authors": ["Jon Adams <jadams@firetiger.net>"],
+  "license": "MIT",
+  "private": true,
+  "ignore": ["**/.*", "node_modules", "bower_components", "test", "tests"],
+  "dependencies": {
+    "bootstrap": "^3.3.7",
+    "angular": "angularjs#^1.6.7",
+    "chai": "^4.1.2",
+    "mocha": "^4.0.1"
+  }
+}

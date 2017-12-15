@@ -1,0 +1,11 @@
+{
+  "name": "demo-directory",
+  "version": "1.0.0",
+  "main": "index.html",
+  "author": "Jon Adams <jadams@firetiger.net>",
+  "license": "MIT",
+  "private": true,
+  "devDependencies": {
+    "bower": "^1.8.2"
+  }
+}
