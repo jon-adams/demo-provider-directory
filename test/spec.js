@@ -1,5 +1,7 @@
 var expect = chai.expect,
-  $injector = angular.injector(['ng', 'providerApp']);
+  $injector = angular.injector(['ng', 'providerApp']),
+  // in case data changes, lots of tests check against how many items are in the starting data array
+  number_of_items_in_hard_coded_array = 6;
 
 describe('ProvidersController', function() {
   var scope, ctrl;
@@ -18,11 +20,18 @@ describe('ProvidersController', function() {
     it('should return array', function() {
       expect(scope.providers)
         .to.be.an('array', 'should have been an array')
-        .that.has.lengthOf(6, 'should have included 6 entries');
+        .that.has.lengthOf(
+          number_of_items_in_hard_coded_array,
+          'should have included ' +
+            number_of_items_in_hard_coded_array +
+            'entries'
+        );
     });
 
     it('first item should be a dude named Mike', function() {
-      expect(scope.providers).to.have.lengthOf(6);
+      expect(scope.providers).to.have.lengthOf(
+        number_of_items_in_hard_coded_array
+      );
       expect(scope.providers[0])
         .to.have.nested.property('first_name')
         .that.equals('Mike');
@@ -33,7 +42,7 @@ describe('ProvidersController', function() {
     it('should not be selected to start', function() {
       expect(scope.providers)
         .to.be.an('array', 'should have been an array')
-        .that.has.lengthOf(6, 'should have included 6 entries');
+        .that.has.lengthOf(number_of_items_in_hard_coded_array);
     });
 
     it('should have no selections yet', function() {
@@ -45,6 +54,27 @@ describe('ProvidersController', function() {
 
     it('should report no selections too', function() {
       expect(scope.any_selections()).to.be.false;
+    });
+
+    it('should let items be removed', function() {
+      expect(scope.providers).to.have.a.lengthOf(
+        number_of_items_in_hard_coded_array
+      );
+
+      // make sure there is at least one to remove anyway
+      expect(scope.providers.length).to.be.at.least(
+        1,
+        'removal test requires at least one item in the starting data array'
+      );
+
+      // mark one for deletion and remove it
+      scope.providers[0].selected = true;
+      scope.remove();
+
+      expect(scope.providers).to.have.a.lengthOf(
+        number_of_items_in_hard_coded_array - 1,
+        'should have included one less entry after removing one'
+      );
     });
   });
 

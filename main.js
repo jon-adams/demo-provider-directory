@@ -65,5 +65,11 @@ var providersCtrl = providerApp.controller(
 
     // text filter
     $scope.query = '';
+
+    $scope.remove = function() {
+      $scope.providers = $filter('filter')($scope.providers, {
+        selected: false
+      });
+    };
   }
 );
