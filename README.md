@@ -24,23 +24,23 @@ Instead going with a simpler but standard `npm` style (but using the more modern
 
 ## Features
 
-* ✓ AngularJS directives and controller
-* ✓ AngularJS markup
-* ✓ CRUD
-  * ✓ Read-only display
-  * ✓ Deletion
-  * ✓ Creation
-* ✓ Sorting
-* ✓ Search
-* ✓ Mobile-friendly (resize your browser as big and small as you want)
+* AngularJS directives and controller
+* AngularJS markup
+* CRUD
+  * Read-only display
+  * Deletion
+  * Creation
+* Sorting
+* Search
+* Mobile-friendly (resize your browser as big and small as you want)
 
 ## Requirements
 
-* ✓ Should load the hard-coded data into the existing data section on page load.
-* ✓ Should have the ability to create providers that will immediately prepend to the list on submit.
-* ✓ Should have the ability to remove selected providers from the list.
-* ✓ Should have the ability to sort the list by any of the fields, both ascending and descending.
-* ✓ Type ahead searching is a nice to have.
-* ✓ Should not require a web server, and should be able to run offline.
-* ✓ Last Name, First Name and Email Address are required fields.
-* ✓ All data exchanges should be in JSON format.
+* Should load the hard-coded data into the existing data section on page load.
+* Should have the ability to create providers that will immediately prepend to the list on submit.
+* Should have the ability to remove selected providers from the list.
+* Should have the ability to sort the list by any of the fields, both ascending and descending.
+* Type ahead searching is a nice to have.
+* Should not require a web server, and should be able to run offline.
+* Last Name, First Name and Email Address are required fields.
+* All data exchanges should be in JSON format.
