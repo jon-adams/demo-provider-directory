@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="en-us">
+<html lang="en-us" ng-app="providerApp">
 
 <head>
     <meta charset="utf-8">
@@ -20,7 +20,7 @@
 
 </head>
 
-<body>
+<bodyy ng-controller="ProvidersController">
 
     <div class="container-fluid">
         <div class="header">
@@ -68,128 +68,24 @@
                     <div id="provider-list-scroller">
                         <table id="provider-list" class="table table-hover table-striped table-responsive">
                             <tbody>
-                                <tr>
+                                <tr ng-repeat="provider in providers">
                                     <td>
                                         <input type="checkbox"/>
                                     </td>
                                     <td>
-                                        <div><strong>Last Name, First Name</strong></div>
-                                        <span>Email Address</span>
+                                        <div><strong>{{provider.last_name}}, {{provider.first_name}}</strong></div>
+                                        <span>{{provider.email_address}}</span>
                                     </td>
                                     <td>
-                                        <div>Speciality</div>
-                                        <span>Practice Name</span>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td>
-                                        <input type="checkbox"/>
-                                    </td>
-                                    <td>
-                                        <div><strong>Last Name, First Name</strong></div>
-                                        <span>Email Address</span>
-                                    </td>
-                                    <td>
-                                        <div>Speciality</div>
-                                        <span>Practice Name</span>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td>
-                                        <input type="checkbox"/>
-                                    </td>
-                                    <td>
-                                        <div><strong>Last Name, First Name</strong></div>
-                                        <span>Email Address</span>
-                                    </td>
-                                    <td>
-                                        <div>Speciality</div>
-                                        <span>Practice Name</span>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td>
-                                        <input type="checkbox"/>
-                                    </td>
-                                    <td>
-                                        <div><strong>Last Name, First Name</strong></div>
-                                        <span>Email Address</span>
-                                    </td>
-                                    <td>
-                                        <div>Speciality</div>
-                                        <span>Practice Name</span>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td>
-                                        <input type="checkbox"/>
-                                    </td>
-                                    <td>
-                                        <div><strong>Last Name, First Name</strong></div>
-                                        <span>Email Address</span>
-                                    </td>
-                                    <td>
-                                        <div>Speciality</div>
-                                        <span>Practice Name</span>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td>
-                                        <input type="checkbox"/>
-                                    </td>
-                                    <td>
-                                        <div><strong>Last Name, First Name</strong></div>
-                                        <span>Email Address</span>
-                                    </td>
-                                    <td>
-                                        <div>Speciality</div>
-                                        <span>Practice Name</span>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td>
-                                        <input type="checkbox"/>
-                                    </td>
-                                    <td>
-                                        <div><strong>Last Name, First Name</strong></div>
-                                        <span>Email Address</span>
-                                    </td>
-                                    <td>
-                                        <div>Speciality</div>
-                                        <span>Practice Name</span>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td>
-                                        <input type="checkbox"/>
-                                    </td>
-                                    <td>
-                                        <div><strong>Last Name, First Name</strong></div>
-                                        <span>Email Address</span>
-                                    </td>
-                                    <td>
-                                        <div>Speciality</div>
-                                        <span>Practice Name</span>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td>
-                                        <input type="checkbox"/>
-                                    </td>
-                                    <td>
-                                        <div><strong>Last Name, First Name</strong></div>
-                                        <span>Email Address</span>
-                                    </td>
-                                    <td>
-                                        <div>Speciality</div>
-                                        <span>Practice Name</span>
+                                        <div>{{provider.speciality}}</div>
+                                        <span>{{provider.practice_name}}</span>
                                     </td>
                                 </tr>
                             </tbody>
                         </table>
                     </div>
                     <div class="pull-right">
-                        <button class="btn btn-danger">Remove</button>
+                        <button class="btn btn-danger disabled">Remove</button>
                     </div>
                 </div>
             </div>
