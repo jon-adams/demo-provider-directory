@@ -9,8 +9,11 @@ This is a Provider Directory demonstration application using AngularJS, Bootstra
 I didn't bother with a whole `gulp`/`grunt` build system for this demo. So either follow the below, or just use the necessary files that were included manually.
 
 * Download the repository
-* `npm install`
-* `bower install`
+* Optionally, to get a fresh set of everything necessary:
+  * `yarn`
+  * `yarn global add bower` (if not already installed in your global store)
+  * `bower install`
+* And/or just rely on the provided `bower_components`, then:
 * Open [`index.html`](index.html) in a browser. Enjoy.
 
 ## Running the tests
@@ -20,7 +23,7 @@ I didn't bother with a whole `gulp`/`grunt` build system for this demo. So eithe
 
 (Could have run these with node... But this way it is super easy on the user to setup the environment—all you need is this repository, a basic `npm` install, and a modern browser.)
 
-## Development
+## Developing
 
 Normally, I would setup a `yeoman` template with `gulp`, `less`, image/css/js minification, probably some TypeScript, webpack, etc. But all that seemed overkill for a code kata.
 
@@ -28,7 +31,7 @@ See the in-production [`ds-hsgc-api-samples/widgets`](https://github.com/jon-ada
 
 Instead going with a simpler but standard `npm` style (but using the more modern `yarn`) and `bower` for development environment setup. Scripts/styles are injected manually for demonstration purposes only.
 
-## Features
+## Featuring
 
 * AngularJS directives and controller
 * AngularJS markup
@@ -40,7 +43,7 @@ Instead going with a simpler but standard `npm` style (but using the more modern
 * Search
 * Mobile-friendly (resize your browser as big and small as you want)
 
-## Requirements
+## Original Demo Requirements
 
 * Should load the hard-coded data into the existing data section on page load.
 * Should have the ability to create providers that will immediately prepend to the list on submit.
