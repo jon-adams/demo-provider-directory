@@ -6,13 +6,19 @@ This is a Provider Directory demonstration application using AngularJS, Bootstra
 
 ## Getting started
 
-Open [`index.html`](index.html) in a browser. Enjoy.
+I didn't bother with a whole `gulp`/`grunt` build system for this demo. So either follow the below, or just use the necessary files that were included manually.
+
+* Download the repository
+* `npm install`
+* `bower install`
+* Open [`index.html`](index.html) in a browser. Enjoy.
 
 ## Running the tests
 
-Open [`test.html`](test.html) in a browser.
+* Follow the Getting Started instructions above
+* Open [`test.html`](test.html) in a browser.
 
-(Could have run these with node... But this way it is super easy on the user to setup the environment—all you need is this repository and a modern browser.)
+(Could have run these with node... But this way it is super easy on the user to setup the environment—all you need is this repository, a basic `npm` install, and a modern browser.)
 
 ## Development
 
