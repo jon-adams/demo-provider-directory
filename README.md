@@ -12,8 +12,6 @@ Normally, I would setup a `yeoman` template with `gulp`, `less`, image/css/js mi
 
 ## To-do/dev plan
 
-* TDD with mocha and chai
-* Start with provided data
 * Basic HTML layout/style
 * AngularJS directives and controller
 * AngularJS markup
