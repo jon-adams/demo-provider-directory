@@ -1,6 +1,7 @@
 <!doctype html>
 <html lang="en-us">
-  <head>
+
+<head>
     <meta charset="utf-8">
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -9,26 +10,191 @@
 
     <link rel="icon" href="favicon.ico" />
     <link rel="apple-touch-icon" sizes="152x152" href="apple-touch-icon.png" />
-    <meta name="msapplication-config" content="none"/>
+    <meta name="msapplication-config" content="none" />
 
     <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.css">
     <link rel="stylesheet" href="main.css">
 
     <script src="bower_components/angular/angular.min.js"></script>
     <script src="main.js"></script>
-    
-  </head>
-  <body>
-   
-    <div class="container">
-      <div class="header">
-        <h3 class="text-muted nav-header">
-          Provider Directory
-        </h3>
-        <p>
-            <a href="test.html">Run tests</a>
-        </p>
-      </div>
-    
-  </body>
+
+</head>
+
+<body>
+
+    <div class="container-fluid">
+        <div class="header">
+            <h3 class="text-muted nav-header">
+                Provider Directory
+            </h3>
+            <p>
+                <a href="test.html">Run tests</a>
+            </p>
+        </div>
+
+        <div class="well">
+            <div class="row">
+                <div class="col-sm-4">
+                    <form class="">
+                        <h2>Create Provider</h2>
+                        <div class="form-group">
+                            <label for="last_name">Last Name</label>
+                            <input type="text" class="form-control" id="last_name" placeholder="John">
+                        </div>
+                        <div class="form-group">
+                            <label for="first_name">First Name</label>
+                            <input type="text" class="form-control" id="first_name" placeholder="Smith">
+                        </div>
+                        <div class="form-group">
+                            <label for="email">Email address</label>
+                            <input type="email" class="form-control" id="email" placeholder="person@example.com">
+                        </div>
+                        <div class="form-group">
+                            <label for="specialty">Email address</label>
+                            <input type="text" class="form-control" id="specialty" placeholder="Galactic Inquisitor">
+                        </div>
+                        <div class="form-group">
+                            <label for="practice">Practice Name</label>
+                            <input type="password" class="form-control" id="practice" placeholder="Universal Exports">
+                        </div>
+                        <p class="help-block">Add a new provider by entering the information above and clicking <strong>Submit</strong>.</p>
+                        <button type="submit" class="btn btn-primary">Submit</button>
+                    </form>
+                </div>
+
+                <div class="col-sm-8">
+                    <div class="pull-right"><select><option>Sort By</option></select></div>
+                    <h2>Provider List</h2>
+                    <div id="provider-list-scroller">
+                        <table id="provider-list" class="table table-hover table-striped table-responsive">
+                            <tbody>
+                                <tr>
+                                    <td>
+                                        <input type="checkbox"/>
+                                    </td>
+                                    <td>
+                                        <div><strong>Last Name, First Name</strong></div>
+                                        <span>Email Address</span>
+                                    </td>
+                                    <td>
+                                        <div>Speciality</div>
+                                        <span>Practice Name</span>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <input type="checkbox"/>
+                                    </td>
+                                    <td>
+                                        <div><strong>Last Name, First Name</strong></div>
+                                        <span>Email Address</span>
+                                    </td>
+                                    <td>
+                                        <div>Speciality</div>
+                                        <span>Practice Name</span>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <input type="checkbox"/>
+                                    </td>
+                                    <td>
+                                        <div><strong>Last Name, First Name</strong></div>
+                                        <span>Email Address</span>
+                                    </td>
+                                    <td>
+                                        <div>Speciality</div>
+                                        <span>Practice Name</span>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <input type="checkbox"/>
+                                    </td>
+                                    <td>
+                                        <div><strong>Last Name, First Name</strong></div>
+                                        <span>Email Address</span>
+                                    </td>
+                                    <td>
+                                        <div>Speciality</div>
+                                        <span>Practice Name</span>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <input type="checkbox"/>
+                                    </td>
+                                    <td>
+                                        <div><strong>Last Name, First Name</strong></div>
+                                        <span>Email Address</span>
+                                    </td>
+                                    <td>
+                                        <div>Speciality</div>
+                                        <span>Practice Name</span>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <input type="checkbox"/>
+                                    </td>
+                                    <td>
+                                        <div><strong>Last Name, First Name</strong></div>
+                                        <span>Email Address</span>
+                                    </td>
+                                    <td>
+                                        <div>Speciality</div>
+                                        <span>Practice Name</span>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <input type="checkbox"/>
+                                    </td>
+                                    <td>
+                                        <div><strong>Last Name, First Name</strong></div>
+                                        <span>Email Address</span>
+                                    </td>
+                                    <td>
+                                        <div>Speciality</div>
+                                        <span>Practice Name</span>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <input type="checkbox"/>
+                                    </td>
+                                    <td>
+                                        <div><strong>Last Name, First Name</strong></div>
+                                        <span>Email Address</span>
+                                    </td>
+                                    <td>
+                                        <div>Speciality</div>
+                                        <span>Practice Name</span>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <input type="checkbox"/>
+                                    </td>
+                                    <td>
+                                        <div><strong>Last Name, First Name</strong></div>
+                                        <span>Email Address</span>
+                                    </td>
+                                    <td>
+                                        <div>Speciality</div>
+                                        <span>Practice Name</span>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div class="pull-right">
+                        <button class="btn btn-danger">Remove</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
 </html>

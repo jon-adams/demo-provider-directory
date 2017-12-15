@@ -12,7 +12,6 @@ Normally, I would setup a `yeoman` template with `gulp`, `less`, image/css/js mi
 
 ## To-do/dev plan
 
-* Basic HTML layout/style
 * AngularJS directives and controller
 * AngularJS markup
 * CRUD
