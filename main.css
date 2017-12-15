@@ -2,9 +2,11 @@
 body {
   padding-top: 20px;
   padding-bottom: 20px;
+  min-width: 355px;
 }
 
 #provider-list-scroller {
+  margin-top: 15px;
   margin-bottom: 15px;
 }
 

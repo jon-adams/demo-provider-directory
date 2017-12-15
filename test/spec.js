@@ -120,7 +120,7 @@ describe('ProvidersController', function() {
     });
 
     // would normally really run these verifications with E2E AngularJS, but setting all that up in browser without node not worth the time effort for this demo; sorry :(  — but it would look like this:
-    it.skip('should be possible to control provider order via the drop-down — skipping test runner dependency setup for this demo, sorry; this should report "pending": ', function() {
+    it.skip('should be possible to control provider order via the drop-down — this should report "pending" for now (see comments): ', function() {
       var queryField = angular.element(by.model('query')),
         orderSelect = angular.element(by.model('orderProp')),
         lastNameOption = orderSelect.element(

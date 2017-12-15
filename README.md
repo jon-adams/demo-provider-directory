@@ -22,7 +22,7 @@ See the in-production [`ds-hsgc-api-samples/widgets`](https://github.com/jon-ada
 
 Instead going with a simpler but standard `npm` style (but using the more modern `yarn`) and `bower` for development environment setup. Scripts/styles are injected manually for demonstration purposes only.
 
-## To-do/dev plan
+## Features
 
 * ✓ AngularJS directives and controller
 * ✓ AngularJS markup
@@ -32,7 +32,7 @@ Instead going with a simpler but standard `npm` style (but using the more modern
   * ✓ Creation
 * ✓ Sorting
 * ✓ Search
-* Inline editing, if time permits
+* ✓ Mobile-friendly (resize your browser as big and small as you want)
 
 ## Requirements
 
